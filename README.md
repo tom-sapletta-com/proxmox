@@ -63,83 +63,15 @@ graph TB
 ## Warstwa Fizyczna
 
 ### 1. Serwer Główny (MiniPC)
-```mermaid
-graph LR
-    subgraph "MiniPC - Intel i7-12CPU / 64GB RAM"
-        CPU[16 CPU Cores]
-        RAM[64GB RAM]
-        PROX[Proxmox VE]
-    end
-    
-    CPU --> PROX
-    RAM --> PROX
-    
-    style CPU fill:#4444444
-    style RAM fill:#777777
-    style PROX fill:#999999
-```
-
-
-#### ASCII - Serwer Główny
-```
-    ┌─────────────────────────────────────────────────────────┐
-    │           MiniPC - Intel i7-12CPU / 64GB RAM            │
-    │                                                         │
-    │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐  │
-    │  │ 16 CPU      │    │   64GB      │    │  Proxmox    │  │
-    │  │ Cores       │───►│   RAM       │───►│     VE      │  │
-    │  │             │    │             │    │             │  │
-    │  └─────────────┘    └─────────────┘    └─────────────┘  │
-    │                                                         │
-    └─────────────────────────────────────────────────────────┘
-```
 
 **Specyfikacja:**
-- Procesor: Intel i7 (16 rdzeni)
+- Procesor: Intel i7 (16 rdzeni)  MiniPC - Intel i7-12CPU / 64GB RAM 
 - RAM: 64GB
 - Hypervisor: Proxmox VE
 - Rola: Główny serwer wirtualizacji
 
 ### 2. Serwer Backupów
-```mermaid
-graph LR
-    subgraph "Proxmox Backup Server"
-        CPU2[Intel Celeron N5105]
-        RAM2[16GB RAM]
-        STORAGE[2TB Storage]
-        PBS[Proxmox Backup]
-    end
-    
-    CPU2 --> PBS
-    RAM2 --> PBS
-    STORAGE --> PBS
-    
-    style CPU2 fill:#444444
-    style RAM2 fill:#777777
-    style STORAGE fill:#999999
-    style PBS fill:#dddddd
-```
 
-#### ASCII - Serwer Backupów
-```
-    ┌───────────────────────────────────────────────────────────┐
-    │                Proxmox Backup Server                      │
-    │                                                           │
-    │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐        │
-    │  │Intel Celeron│  │   16GB      │  │    2TB      │        │
-    │  │    N5105    │  │    RAM      │  │  Storage    │        │
-    │  │             │  │             │  │             │        │
-    │  └─────────────┘  └─────────────┘  └─────────────┘        │
-    │         │                │                │               │
-    │         └────────────────┼────────────────┘               │
-    │                          ▼                                │
-    │                 ┌─────────────────┐                       │
-    │                 │ Proxmox Backup  │                       │
-    │                 │     Service     │                       │
-    │                 └─────────────────┘                       │
-    │                                                           │
-    └───────────────────────────────────────────────────────────┘
-```
 **Specyfikacja:**
 - Procesor: Intel Celeron N5105
 - RAM: 16GB
@@ -215,22 +147,7 @@ graph TB
 
 ## Warstwa Dostępu
 
-```mermaid
-sequenceDiagram
-    participant U as Użytkownik
-    participant LC as Lenovo Carbon 3<br/>(FydeOS)
-    participant MP as MiniPC<br/>(Proxmox)
-    participant VM as Maszyna Wirtualna
-    
-    U->>LC: Uruchomienie klienta SPICE
-    LC->>MP: Połączenie SPICE
-    MP->>VM: Przekierowanie do VM
-    VM->>MP: Obraz pulpitu
-    MP->>LC: Stream SPICE
-    LC->>U: Wyświetlenie pulpitu
-    
-    Note over LC,MP: Protokół SPICE<br/>Niska latencja
-```
+
 ### ASCII - Sekwencja Dostępu SPICE
 ```
     Użytkownik    Lenovo Carbon 3    MiniPC         Maszyna
