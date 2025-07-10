@@ -30,10 +30,10 @@ graph TB
     B -->|Automatyczne<br/>Backupy| C
     D -->|SPICE Protocol<br/>Zdalny dostęp| B
     
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
+    style A fill:#444444
+    style B fill:#777777
+    style C fill:#999999
+    style D fill:#dddddd
 ```
 
 ### ASCII - Architektura Ogólna
@@ -74,9 +74,9 @@ graph LR
     CPU --> PROX
     RAM --> PROX
     
-    style CPU fill:#ffcdd2
-    style RAM fill:#f8bbd9
-    style PROX fill:#e1bee7
+    style CPU fill:#4444444
+    style RAM fill:#777777
+    style PROX fill:#999999
 ```
 
 
@@ -114,10 +114,10 @@ graph LR
     RAM2 --> PBS
     STORAGE --> PBS
     
-    style CPU2 fill:#c8e6c9
-    style RAM2 fill:#a5d6a7
-    style STORAGE fill:#81c784
-    style PBS fill:#66bb6a
+    style CPU2 fill:#444444
+    style RAM2 fill:#777777
+    style STORAGE fill:#999999
+    style PBS fill:#dddddd
 ```
 
 #### ASCII - Serwer Backupów
@@ -168,10 +168,10 @@ graph TB
     PROX_LAYER --> VM3
     PROX_LAYER --> VM4
     
-    style VM1 fill:#e8f5e8
-    style VM2 fill:#e3f2fd
-    style VM3 fill:#fff3e0
-    style VM4 fill:#fce4ec
+    style VM1 fill:#999999
+    style VM2 fill:#777777
+    style VM3 fill:#dddddd
+    style VM4 fill:#444444
 ```
 ### ASCII - Warstwa Wirtualizacji
 ```
@@ -292,10 +292,10 @@ graph TB
     BACKUP --> BACK
     MAIN --> VMS
     
-    style WEB fill:#e8eaf6
-    style SSH fill:#e0f2f1
+    style WEB fill:#444444
+    style SSH fill:#777777
     style MON fill:#fff8e1
-    style BACKUP fill:#fce4ec
+    style BACKUP fill:#444444
 ```
 ### ASCII - Warstwa Zarządzania
 ```
@@ -361,9 +361,9 @@ flowchart LR
     COMPRESS --> STORE
     
     style PROD fill:#ffebee
-    style SCHEDULE fill:#e8f5e8
-    style COMPRESS fill:#fff3e0
-    style STORE fill:#e3f2fd
+    style SCHEDULE fill:#999999
+    style COMPRESS fill:#dddddd
+    style STORE fill:#777777
 ```
 ### ASCII - Przepływ Danych
 ```
