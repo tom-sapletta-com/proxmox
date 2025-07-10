@@ -33,7 +33,7 @@ graph TB
     style A fill:#444444
     style B fill:#777777
     style C fill:#999999
-    style D fill:#dddddd
+    style D fill:#aaaaaa
 ```
 
 ### ASCII - Architektura Ogólna
@@ -102,7 +102,7 @@ graph TB
     
     style VM1 fill:#999999
     style VM2 fill:#777777
-    style VM3 fill:#dddddd
+    style VM3 fill:#aaaaaa
     style VM4 fill:#444444
 ```
 ### ASCII - Warstwa Wirtualizacji
@@ -279,7 +279,7 @@ flowchart LR
     
     style PROD fill:#ffebee
     style SCHEDULE fill:#999999
-    style COMPRESS fill:#dddddd
+    style COMPRESS fill:#aaaaaa
     style STORE fill:#777777
 ```
 ### ASCII - Przepływ Danych
