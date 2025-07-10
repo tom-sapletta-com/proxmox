@@ -22,7 +22,7 @@ graph TB
         A[Lenovo Yoga 7<br/>💻 Zarządzanie] 
         B[MiniPC i7<br/>🖥️ Proxmox VE]
         C[Proxmox Backup<br/>💾 Celeron N5105]
-        D[Lenovo Carbon 3<br/>📱 FydeOS Client]
+        D[Lenovo Carbon X1 Carbon v3<br/>📱 FydeOS Client]
     end
     
     A -->|SSH/HTTPS<br/>Zarządzanie| B
@@ -51,7 +51,7 @@ graph TB
     │            │ Backupów                     │ Backupy         │
     │            ▼                              ▼                 │
     │   ┌─────────────────┐         ┌─────────────────────────┐   │
-    │   │ Proxmox Backup  │◄────────┤   Lenovo Carbon 3       │   │
+    │   │ Proxmox Backup  │◄────────┤   Lenovo X1 Carbon v3   │   │
     │   │ 💾 Celeron N5105│         │   📱 FydeOS Client      │   │
     │   │ 16GB RAM/2TB    │         │   SPICE Protocol        │   │
     │   └─────────────────┘         └─────────────────────────┘   │
